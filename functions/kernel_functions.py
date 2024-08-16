@@ -11,26 +11,22 @@ def u(q,t):
 def up(q,t):
     return -((np.pi * q)/((q*t + 2)**2))
 
-def upp(q,t):
-    return (2*np.pi*q**2)/(q*t + 2)**3
+# def upp(q,t):
+#     return (2*np.pi*q**2)/(q*t + 2)**3
 
-def fun_n(p,q):
-    return p * fun_m(p,q) * ( 1/(np.tan(np.pi/(q+2))**p) ) * ( 1 + np.tan(u(q,t))**2 )
+# def fun_n(t,p,q):
+#     return p * fun_m(p,q) * ( 1/(np.tan(np.pi/(q+2))**p) ) * ( 1 + np.tan(u(q,t))**2 )
 
 def k(p,q):
     return np.tan(np.pi/(q+2))**(p-1) + np.tan(np.pi/(q+2))**(p+1)
 
-def integrand_eligible_5(x):
-    return np.exp(1)**((1/x)-1)
+def integrand_eligible_5(t):
+    return np.exp(1)**((1/t)-1)
 
-def h_fathi(x):
-        return (np.pi * x)/(2 + 2*x)
 
-def integrand_fathi(p, x):
-    return np.exp(p*(1 - np.tan(h_fathi(x))))
 
-def m_fathi(x):
-    1 + np.tan(h_fathi(x))**2
+# def m_fathi(x):
+#     1 + np.tan(h_fathi(x))**2
 
 def q_value(ker_num, n, p):
     if ker_num == 0:
@@ -115,10 +111,16 @@ def kernel(ker_num, t, p, q):
         tmp = (t**2 -1) - (t**(-2*p + 1) - 1)/(-2*p +1) - (t**(-p +1) - 1)/(-p +1)
 
     elif ker_num == "fathi":
+
+        def h_fathi(t):
+            return (np.pi * t) / (2 + 2 * t)
+        def integrand_fathi(p, t):
+            return np.exp(p * (1 - np.tan(h_fathi(t))))
+        
         growth = (t ** 2 - 1) / 2
         barrier = []
         for _ in range(growth.shape[0]):
-            barrier.append(quad(integrand_fathi, 1, t[_])[0])
+            barrier.append(quad(integrand_fathi, 1, t[_], args=(p,))[0])
         tmp = growth - np.array(barrier)
 
     return np.sum(tmp)
@@ -166,6 +168,9 @@ def der_kernel(ker_num, t, p, q):
         tmp = 2*t - t**(-2*p) - t**(-p)
 
     elif ker_num == "fathi": # p >= 3
+        def h_fathi(t):
+            return (np.pi * t) / (2 + 2 * t)
+
         tmp = t - np.exp(p * (1 - np.tan(h_fathi(t))))
 
     return tmp
