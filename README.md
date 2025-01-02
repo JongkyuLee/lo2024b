@@ -1,7 +1,9 @@
 ## lo2024b
 
-New interior-point methods for linear optimization problems
 Jongkyu Lee · You-Young Cho · Gyeong-Mi Cho*
+
+New interior-point methods for linear optimization problems
+
 
 ## Abstract 
 In this paper, we proposed new interior-point methods (IPMs) for linear optimization (LO) problem based on a generalized class of kernel functions, originally defined by [1]. 
