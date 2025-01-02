@@ -1,4 +1,4 @@
-# lo2024b
+## lo2024b
 
 New interior-point methods for linear optimization problems
 Jongkyu Lee · You-Young Cho · Gyeong-Mi Cho*
