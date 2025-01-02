@@ -1,4 +1,4 @@
-### Create and Activate the Conda Environment
+# Create and Activate the Conda Environment
 
 It is recommended to run the project in a Python 3.12 environment.  
 If Conda is not installed, download and install it from the [Anaconda website](https://www.anaconda.com/products/distribution) or [Miniconda website](https://docs.conda.io/en/latest/miniconda.html).  
@@ -15,6 +15,9 @@ conda activate env_name
 # 3. Install packasges
 pip install -r requirements.txt
 ```
+
+
+
 
 ## lo2024b
 
