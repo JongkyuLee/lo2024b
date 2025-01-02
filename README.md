@@ -1,3 +1,11 @@
+## lo2024b
+
+Jongkyu Lee · You-Young Cho · Gyeong-Mi Cho*
+
+New interior-point methods for linear optimization problems.
+
+
+
 # Create and Activate the Conda Environment
 
 It is recommended to run the project in a Python 3.12 environment.  
@@ -15,15 +23,6 @@ conda activate env_name
 # 3. Install packasges
 pip install -r requirements.txt
 ```
-
-
-
-
-## lo2024b
-
-Jongkyu Lee · You-Young Cho · Gyeong-Mi Cho*
-
-New interior-point methods for linear optimization problems.
 
 
 ## Abstract 
