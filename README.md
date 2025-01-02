@@ -3,7 +3,7 @@
 It is recommended to run the project in a Python 3.12 environment.  
 If Conda is not installed, download and install it from the [Anaconda website](https://www.anaconda.com/products/distribution) or [Miniconda website](https://docs.conda.io/en/latest/miniconda.html).  
 
-The following commands should be executed in *Command Prompt (Windows)* or **Terminal (macOS/Linux)**.
+The following commands should be executed in **Command Prompt (Windows)** or **Terminal (macOS/Linux)**.
 ```bash
 
 # 1. Create a Conda virtual environment (replace 'env_name' with your preferred environment name)
