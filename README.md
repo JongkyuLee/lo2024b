@@ -2,7 +2,7 @@
 
 Jongkyu Lee · You-Young Cho · Gyeong-Mi Cho*
 
-New interior-point methods for linear optimization problems
+New interior-point methods for linear optimization problems.
 
 
 ## Abstract 
