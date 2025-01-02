@@ -1,3 +1,18 @@
+## 1. Set Up Python 3.12 Conda Environment
+
+It is recommended to run the project in a Python 3.12 environment.  
+If Conda is not installed, download and install it from the [Anaconda website](https://www.anaconda.com/products/distribution) or [Miniconda website](https://docs.conda.io/en/latest/miniconda.html).  
+
+### Create and Activate the Conda Environment
+
+```bash
+# 1. Create a Conda virtual environment (replace 'env_name' with your preferred environment name)
+conda create -n env_name python=3.12
+
+# 2. Activate the virtual environment
+conda activate env_name
+
+
 ## lo2024b
 
 Jongkyu Lee · You-Young Cho · Gyeong-Mi Cho*
