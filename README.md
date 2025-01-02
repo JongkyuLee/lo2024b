@@ -5,12 +5,13 @@ If Conda is not installed, download and install it from the [Anaconda website](h
 
 ### Create and Activate the Conda Environment
 
+```bash
 # 1. Create a Conda virtual environment (replace 'env_name' with your preferred environment name)
 conda create -n env_name python=3.12
 
 # 2. Activate the virtual environment
 conda activate env_name
-
+```
 
 ## lo2024b
 
