@@ -1,4 +1,6 @@
 from functions.implementation import *
+import time
+
 
 directory = 'random_test_data_set/'
 sorted_files = sorted(os.listdir(directory))
@@ -8,6 +10,9 @@ theta = 0.5
 int_mu = 1
 
 result = []
+result_time = []
+
+
 for filename in sorted_files:
     print("====================================")
     file_path = os.path.join(directory, filename)
@@ -15,7 +20,10 @@ for filename in sorted_files:
 
     int_x, int_y, int_s, A, b, c = data['int_x'], data['int_y'], data['int_s'], data['A'], data['b'], data['c']
     m, n = A.shape[0], A.shape[1]
+
     tmp_result = []
+    tmp_time_result = []
+
     test_kernel_list = [2, 3, 4, 5, "mousaab", "benhadid21", "benhadid23", "fathi"]
     for ker_num in test_kernel_list:
         x, y, s = int_x.copy(), int_y.copy(), int_s.copy()
@@ -23,11 +31,23 @@ for filename in sorted_files:
 
         p = p_value(ker_num, n)
         q = q_value(ker_num, n, p)
+        start_time = time.time()
         total_itr = implementation(ker_num, A, p, q, m, n, mu, x, y, s, theta, epsilon, tau)
+        elapsed_time = time.time() - start_time
+
         tmp_result.append(total_itr)
+        tmp_time_result.append(round(elapsed_time, 4))
 
     print(f"{filename} : {tmp_result}")
+    print(f"{filename} : {tmp_time_result}")
+
     result.append(tmp_result)
+    result_time.append(tmp_time_result)
 
 result = np.array(result)
+result_time = np.array(result_time)
+
 print(result)
+
+print("Final Time Results (seconds):")
+print(result_time)
