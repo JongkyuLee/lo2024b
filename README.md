@@ -24,16 +24,18 @@ pip install -r requirements.txt
 
 
 ## Abstract 
-In this paper, we propose new interior-point methods for solving linear optimization problem based on a generalized class of kernel functions, originally defined in \cite{ch21}.
+In this paper, we propose new interior-point methods for solving linear optimization problemS based on a generalized class of kernel functions, originally defined in [1].
 New search directions and proximity measures are defined based on these kernel functions.
-We prove that the complexity is $\mathcal{O}\left(\sqrt{n} ( \log n) \log\frac{n\mu^0}{\epsilon}\right)$
-for long-step methods and $\mathcal{O}\left(\sqrt{n}\log\frac{n\mu^0}{\epsilon}\right)$ for short-step methods,
-where $n$ is a dimension of the problem, $\mu^0>0$, and $\epsilon>0$.
-These represent the theoretically best complexity results for such methods so far.
-We improve complexity by a constant factor over the method in \cite{ch21}.
+We prove that the complexity is $\mathcal{O}\left(\sqrt{n} ( \log n) \log ({n}/{\epsilon})\right)$
+for long-step methods and $\mathcal{O}\left(\sqrt{n}\log({n}/{\epsilon})\right)$ for short-step methods,
+where $n$ is the dimension of the problem and $\epsilon>0$.
+These represent the theoretically best-known complexity results for such methods so far.
+%We improve complexity by a constant factor over the method in \cite{ch21}.
 Finally, numerical examples are given to demonstrate the efficiency of the proposed methods.
-Our method achieved the fewest iteration and shortest running time in 84\% of test cases, including 36 randomly generated problems, 25 NETLIB benchmark problems \cite{k03}, and 41 instances from Bouafia et al. \cite{bo16}.
+Our method achieved the fewest iterations and shortest running time in 84\% of test cases, including 36 randomly generated problems, 25 NETLIB benchmark problems \cite{k03}, and 41 instances from Bouafia et al. \cite{bo16}.
 
 
 [1] Y.Y. Cho and G.M. Cho, New interior-point methods for $P_*{\kappa}$-nonlinear complementarity problems, 
 J. Nonlinear Convex Anal., 22, 901-917 (2021)
+[2] Koch, T., The final NETLIB-LP results, Oper. Res. Lett., 32, 138-142 (2004)
+[3] Bouafia, M., Benterki, D., Yassine, A., An efficient primal-dual interior point method for linear programming problems based on a new kernel function with a trigonometric barrier term, J. Optim. Theory Appl., 170(2), 528-545 (2016)
