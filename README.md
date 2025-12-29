@@ -32,7 +32,7 @@ where $n$ is the dimension of the problem and $\epsilon>0$.
 These represent the theoretically best-known complexity results for such methods so far.
 %We improve complexity by a constant factor over the method in \cite{ch21}.
 Finally, numerical examples are given to demonstrate the efficiency of the proposed methods.
-Our method achieved the fewest iterations and shortest running time in 84\% of test cases, including 36 randomly generated problems, 25 NETLIB benchmark problems \cite{k03}, and 41 instances from Bouafia et al. \cite{bo16}.
+Our method achieved the fewest iterations and shortest running time in 84\% of test cases, including 36 randomly generated problems, 25 NETLIB benchmark problems [2], and 41 instances from Bouafia et al. [3].
 
 
 [1] Y.Y. Cho and G.M. Cho, New interior-point methods for $P_*{\kappa}$-nonlinear complementarity problems, 
