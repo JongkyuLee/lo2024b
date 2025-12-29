@@ -36,6 +36,8 @@ Our method achieved the fewest iterations and shortest running time in 84\% of t
 
 
 [1] Y.Y. Cho and G.M. Cho, New interior-point methods for $P_*{\kappa}$-nonlinear complementarity problems, 
-J. Nonlinear Convex Anal., 22, 901-917 (2021)\\
-[2] Koch, T., The final NETLIB-LP results, Oper. Res. Lett., 32, 138-142 (2004)\\
+J. Nonlinear Convex Anal., 22, 901-917 (2021)
+\newline
+[2] Koch, T., The final NETLIB-LP results, Oper. Res. Lett., 32, 138-142 (2004)
+
 [3] Bouafia, M., Benterki, D., Yassine, A., An efficient primal-dual interior point method for linear programming problems based on a new kernel function with a trigonometric barrier term, J. Optim. Theory Appl., 170(2), 528-545 (2016)
